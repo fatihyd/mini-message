@@ -1,5 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 Mini Message Board
+  a(href='/new') Add a new message!
+  br
+  ul
+  each message in messages
+    li
+      h3= message.user
+      p= message.text
+      small= message.added
