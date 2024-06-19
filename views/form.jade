@@ -1,8 +1,14 @@
-form(method='POST' action='/new')
-  input(type='text' name='user' placeholder='Your name goes here...')
-  br
-  br
-  input(type='text' name='text' placeholder='Message goes here...')
-  br
-  br
-  input(type='submit' value='Add message!')
+extends layout
+
+block content
+  .container
+    h1 Add a New Message
+    .form-container
+      form(method='POST' action='/new')
+        input(type='text' name='user' placeholder='Your name goes here...')
+        br
+        br
+        input(type='text' name='text' placeholder='Message goes here...')
+        br
+        br
+        input(type='submit' value='Add message!')

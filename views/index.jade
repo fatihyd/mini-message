@@ -1,14 +1,15 @@
 extends layout
 
 block content
-  h1 Mini Message Board
-  a(href='/new') Add a new message!
-  br
-  br
-  br
-  ul
-    each message in messages
-      li(style="margin-bottom: 10px;")
-        h3(style="display: inline;")= message.user
-        p= message.text
-        small= message.added
+  .container
+    h1 Mini Message Board
+    a(href='/new') Add a new message!
+    br
+    br
+    br
+    ul
+      each message in messages
+        li(style="margin-bottom: 10px;")
+          h3(style="display: inline;")= message.user
+          p= message.text
+          small= message.added
